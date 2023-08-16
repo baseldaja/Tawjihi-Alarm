@@ -1,5 +1,4 @@
 import time
-import subprocess
 from urllib.request import urlopen
 
 def check_website(url):
@@ -9,13 +8,9 @@ def check_website(url):
     except:
         return False
 
-def play_alarm():
-    # Adjust the command based on your system and the sound file you want to play
-    subprocess.run(["aplay", "path/to/your/alarm_sound.wav"])  # Replace with the actual sound file path
-
 def main():
-    website_url = " https://www.reflexmama.com/products?features=83,75,85," 
-    check_interval = 10  # Set the interval for checking the website in seconds
+    website_url = "https://www.tawjihi.jo/?fbclid=IwAR2xqr6CdO5-SrQ6Jf1lFN8OSTIDWKhjp3a3uN_h9BbSnfC4gvNhRKsfOAc"
+    check_interval = 10
 
     website_live = False
 
@@ -27,7 +22,6 @@ def main():
         if not website_live:
             print("Website is live!")
             website_live = True
-            play_alarm()
 
         time.sleep(check_interval)
 
