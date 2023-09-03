@@ -23,7 +23,4 @@ def main():
             print("Website is live!")
             website_live = True
 
-        time.sleep(check_interval)
-
-if __name__ == "__main__":
-    main()
+        time.sleep(check_interval) 
